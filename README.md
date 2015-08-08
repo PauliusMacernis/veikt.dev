@@ -1,5 +1,5 @@
 # dev.veikt.com
-Developement environment needed for veikt.com projects to build on the local machine. 
+Development environment needed for veikt.com projects to build on the local machine. 
 
 Quick install:
 - Install VirtualBox and Vagrant. 
