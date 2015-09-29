@@ -10,7 +10,7 @@ vagrantfile:
         network:
             private_network: 192.168.56.114
             forwarded_port:
-                vflnp_v8gk8g454s8j:
+                vflnp_5ty08bjlrqub:
                     host: '7834'
                     guest: '22'
         post_up_message: ''
@@ -33,7 +33,7 @@ vagrantfile:
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
                     - '--parser future'
         synced_folder:
-            vflsf_7k6dww5sxcys:
+            vflsf_0o2xrh89juyd:
                 source: ./_install
                 target: /home/_install
                 sync_type: default
@@ -52,7 +52,7 @@ vagrantfile:
                     auto: 'true'
                 owner: www-data
                 group: www-data
-            vflsf_f12q1x789kit:
+            vflsf_jp5szdx4dccx:
                 source: ./veikt.dev
                 target: /home/veikt.dev
                 sync_type: default
@@ -104,8 +104,8 @@ locale:
         locales:
             - en_GB.UTF-8
             - en_US.UTF-8
-            - lt_LT.UTF-8
             - is_IS.UTF-8
+            - lt_LT.UTF-8
 firewall:
     install: '1'
     rules: {  }
@@ -134,7 +134,7 @@ apache:
         - proxy_fcgi
         - rewrite
     vhosts:
-        av_7bka9jbl6d1m:
+        av_7oxmhcirdlzq:
             servername: awesome.dev
             serveraliases:
                 - www.awesome.dev
@@ -151,7 +151,7 @@ apache:
             ssl_protocol: ''
             ssl_cipher: ''
             directories:
-                avd_4v7s2ibirg1x:
+                avd_mbw9xw2qeyac:
                     path: /var/www/awesome
                     options:
                         - Indexes
@@ -163,7 +163,7 @@ apache:
                         - 'all granted'
                     custom_fragment: ''
                     files_match:
-                        avdfm_pfi5xfkzijxu:
+                        avdfm_ebaem4d0mbcj:
                             path: \.php$
                             sethandler: 'proxy:fcgi://127.0.0.1:9000'
                             custom_fragment: ''
@@ -208,7 +208,7 @@ php:
         error_log: /var/log/php-fpm.log
         pid: /var/run/php-fpm.pid
     fpm_pools:
-        phpfp_s9q8ewvyzl2y:
+        phpfp_rlwvo3690g5r:
             ini:
                 prefix: www
                 listen: '127.0.0.1:9000'
@@ -281,15 +281,15 @@ mysql:
         override_options: {  }
     adminer: 0
     users:
-        mysqlnu_4x6dsjz3w30j:
+        mysqlnu_hxa2d0gg5hzo:
             name: veikt
             password: AAMQfaqRFT7sqHFJ
     databases:
-        mysqlnd_oly911ahusq1:
+        mysqlnd_qxoxlb32o73m:
             name: veikt
             sql: /home/_install/db/veikt.sql
     grants:
-        mysqlng_o2bok5r1nia9:
+        mysqlng_cndfp8vofv6k:
             user: veikt
             table: '*.*'
             privileges:
@@ -302,15 +302,15 @@ mariadb:
         override_options: {  }
     adminer: 0
     users:
-        mariadbnu_28c4nucw3cr1:
+        mariadbnu_xvdve59z88jc:
             name: dbuser
             password: '123'
     databases:
-        mariadbnd_woz63c3r4xes:
+        mariadbnd_75trstqelcsa:
             name: dbname
             sql: ''
     grants:
-        mariadbng_ieu4qngrpegr:
+        mariadbng_fw0m46p6yzag:
             user: dbuser
             table: '*.*'
             privileges:
