@@ -1,4 +1,4 @@
-# dev.veikt.com
+# veikt.dev
 Development environment needed for veikt.com projects to build on the local machine. 
 
 Quick install:
