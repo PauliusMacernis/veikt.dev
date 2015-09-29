@@ -71,25 +71,6 @@ vagrantfile:
                     auto: 'true'
                 owner: www-data
                 group: www-data
-            vflsf_nqfjd2g4utbn:
-                source: ./cron.veikt.dev
-                target: /home/cron.veikt.dev
-                sync_type: default
-                smb:
-                    smb_host: ''
-                    smb_username: ''
-                    smb_password: ''
-                rsync:
-                    args:
-                        - '--verbose'
-                        - '--archive'
-                        - '-z'
-                    exclude:
-                        - .vagrant/
-                        - .git/
-                    auto: 'true'
-                owner: www-data
-                group: www-data
         usable_port_range:
             start: 10200
             stop: 10500
@@ -116,7 +97,6 @@ users_groups:
     users:
         - '_install:www-data'
         - 'veikt.dev:www-data'
-        - 'cron.veikt.dev:www-data'
 locale:
     install: '1'
     settings:

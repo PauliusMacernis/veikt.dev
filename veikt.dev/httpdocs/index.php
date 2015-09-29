@@ -1,2 +1,2 @@
 <?php
-	echo 'PHP of the main web works.';
+	echo 'PHP of the veikt.dev works.';
