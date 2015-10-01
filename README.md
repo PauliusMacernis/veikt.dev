@@ -6,7 +6,7 @@ Quick install:
 - Clone (or just download) all files of this repository.
 - Do `vagrant up`
 - Manually copy content of the file `_install\hosts\hosts` into the host file of your local machine.
-- Manually do `git clone https://github.com/sugalvojau/veikt.com.git .` from `veikt.dev/httpdocs`
+- Manually remmove all inner content of `veikt.dev/httpdocs` and manually do `git clone https://github.com/sugalvojau/veikt.com.git .` from `veikt.dev/httpdocs`
 - That is it. Open `veikt.dev` in the internet browser.
 
 More info could be found at https://puphpet.com/#help
