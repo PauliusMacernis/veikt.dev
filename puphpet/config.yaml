@@ -19,13 +19,13 @@ vagrantfile:
                         check_guest_tools: 0
                         update_guest_tools: 0
                 machines:
-                    vflm_hc46bvf64wlv:
+                    vflm_8qsr1h4ljaho:
                         id: veikt.dev
                         hostname: veikt.dev
                         network:
                             private_network: 192.168.56.177
                             forwarded_port:
-                                vflmnfp_za279k5k9uvl:
+                                vflmnfp_oyqthjdpzz5a:
                                     host: '7342'
                                     guest: '22'
                         memory: '768'
@@ -38,7 +38,7 @@ vagrantfile:
                     - '--verbose'
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
         synced_folder:
-            vflsf_9vi97w1oubmo:
+            vflsf_6bjwfxwpc853:
                 source: ./veikt.dev/
                 target: /home/veikt.dev/
                 sync_type: default
@@ -60,7 +60,7 @@ vagrantfile:
                     auto: 'true'
                 owner: www-data
                 group: www-data
-            vflsf_qqjo13583cvh:
+            vflsf_53hradze5clm:
                 source: ./_install/
                 target: /home/_install/
                 sync_type: default
@@ -82,7 +82,7 @@ vagrantfile:
                     auto: 'true'
                 owner: www-data
                 group: www-data
-            vflsf_06vbommn2pak:
+            vflsf_pm1kngt8fjp5:
                 source: ./_logs/
                 target: /var/log
                 sync_type: default
@@ -126,7 +126,6 @@ vagrantfile:
         https: ''
         ftp: ''
         no_proxy: ''
-        enabled: '0'
 server:
     install: '1'
     packages:
@@ -146,10 +145,10 @@ locale:
     settings:
         default_locale: en_US.UTF-8
         locales:
+            - en_AU.UTF-8
+            - en_CA.UTF-8
             - en_GB.UTF-8
             - en_US.UTF-8
-            - en_CA.UTF-8
-            - en_AU.UTF-8
         timezone: UTC
 firewall:
     install: '1'
@@ -168,52 +167,7 @@ nginx:
         proxy_read_timeout: 600s
         names_hash_bucket_size: 128
     upstreams: {  }
-    vhosts:
-        nxv_8y70gbydajjg:
-            server_name: veikt.dev
-            server_aliases:
-                - www.veikt.dev
-            www_root: /home/veikt.dev/httpdocs/step3.output
-            listen_port: '80'
-            index_files:
-                - index.html
-                - index.htm
-                - index.php
-            client_max_body_size: 50m
-            ssl: '0'
-            ssl_cert: ''
-            ssl_key: ''
-            ssl_port: '443'
-            ssl_protocols: ''
-            ssl_ciphers: ''
-            rewrite_to_https: '1'
-            spdy: '1'
-            locations:
-                nxvl_6jm1z23wqimv:
-                    location: /
-                    try_files:
-                        - $uri
-                        - $uri/
-                        - /index.php$is_args$args
-                    fastcgi: ''
-                    fastcgi_index: ''
-                    fastcgi_split_path: ''
-                    proxy: ''
-                    proxy_redirect: ''
-                nxvl_jy6e4h9oze2c:
-                    location: '~ \.php$'
-                    try_files:
-                        - '$uri =404'
-                    fastcgi: '127.0.0.1:9000'
-                    fastcgi_index: index.php
-                    fastcgi_split_path: ^(.+\.php)(/.+)$
-                    fast_cgi_params_extra:
-                        - 'SCRIPT_FILENAME $request_filename'
-                        - 'APP_ENV dev'
-                    set:
-                        - '$path_info $fastcgi_path_info'
-                    proxy: ''
-                    proxy_redirect: ''
+    vhosts: {  }
     proxies: {  }
 apache:
     install: '0'
@@ -229,7 +183,7 @@ apache:
         - proxy_fcgi
         - rewrite
     vhosts:
-        av_51egb64qh7bi:
+        av_z8x7f8w00z8a:
             servername: awesome.dev
             serveraliases:
                 - www.awesome.dev
@@ -248,7 +202,7 @@ apache:
             ssl_protocol: ''
             ssl_cipher: ''
             directories:
-                avd_9uxn7u3ob4iu:
+                avd_lf77sz91d22s:
                     path: /var/www/awesome
                     options:
                         - Indexes
@@ -260,7 +214,7 @@ apache:
                         - 'all granted'
                     custom_fragment: ''
                     files_match:
-                        avdfm_5ak01d5nnywy:
+                        avdfm_0oreqoqymrm0:
                             path: \.php$
                             sethandler: 'proxy:fcgi://127.0.0.1:9000'
                             custom_fragment: ''
@@ -311,7 +265,7 @@ php:
     fpm_ini:
         error_log: /var/log/php-fpm.log
     fpm_pools:
-        phpfp_9mvthjh8yij8:
+        phpfp_b4i6py97bbwj:
             ini:
                 prefix: www
                 listen: '127.0.0.1:9000'
@@ -354,7 +308,7 @@ drush:
 ruby:
     install: '1'
     versions:
-        rv_akz604esu28k:
+        rv_tg5y01dv5ln9:
             default: '1'
             bundler: '1'
             version: 1.9.3
@@ -394,15 +348,15 @@ mariadb:
         override_options: {  }
     adminer: 0
     users:
-        mariadbnu_kad4coiyji15:
+        mariadbnu_64jxdu9c3awd:
             name: dbuser
             password: '123'
     databases:
-        mariadbnd_2up29giuu4j8:
+        mariadbnd_qvpkvq02vxhh:
             name: dbname
             sql: ''
     grants:
-        mariadbng_q0tjrtaaeiva:
+        mariadbng_3tjcy9ot2t45:
             user: dbuser
             table: '*.*'
             privileges:
@@ -415,15 +369,15 @@ mysql:
         override_options: {  }
     adminer: 0
     users:
-        mysqlnu_3rf0x12wul99:
+        mysqlnu_xphpidy0f88t:
             name: veikt
             password: AAMQfaqRFT7sqHFJ
     databases:
-        mysqlnd_fgu3t7718teu:
+        mysqlnd_ae4b48e8qnw0:
             name: veikt
             sql: /home/_install/db/veikt.sql
     grants:
-        mysqlng_cv1k5aebqatk:
+        mysqlng_70qkwseqkppd:
             user: veikt
             table: '*.*'
             privileges:
@@ -488,7 +442,7 @@ elastic_search:
         version: 2.3.1
         java_install: true
     instances:
-        esi_znt4gy6iyulz:
+        esi_dc05uel9m80b:
             name: es-01
 solr:
     install: '0'
