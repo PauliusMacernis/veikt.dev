@@ -13,4 +13,13 @@ Quick install:
 
 More info could be found at https://puphpet.com/#help
 
+
+If you are interested to check the php project cvbankas.lt (for example) then you have to navigate:
+- For step1 (download): http://step1.veikt.dev/projects/cvbankas.lt/index.php
+- For step2 (normalize): http://step2.veikt.dev/projects/cvbankas.lt/index.php
+- For step3 (output): http://www.veikt.dev
+
 Contact me if any difficulties arise.
+
+Known bugs:
+- If you see 404 error after checking the http://www.veikt.dev then try to ssh into the server (`vagrant ssh`) and restart nginx service (`sudo service nginx restart`). The website should work fine after restarting the service.
