@@ -19,13 +19,13 @@ vagrantfile:
                         check_guest_tools: 0
                         update_guest_tools: 0
                 machines:
-                    vflm_8qsr1h4ljaho:
+                    vflm_i7rupjre2uya:
                         id: veikt.dev
                         hostname: veikt.dev
                         network:
                             private_network: 192.168.56.177
                             forwarded_port:
-                                vflmnfp_oyqthjdpzz5a:
+                                vflmnfp_b2jarqqmoikl:
                                     host: '7342'
                                     guest: '22'
                         memory: '768'
@@ -38,7 +38,7 @@ vagrantfile:
                     - '--verbose'
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
         synced_folder:
-            vflsf_6bjwfxwpc853:
+            vflsf_kdzehdmq9j6x:
                 source: ./veikt.dev/
                 target: /home/veikt.dev/
                 sync_type: default
@@ -60,7 +60,7 @@ vagrantfile:
                     auto: 'true'
                 owner: www-data
                 group: www-data
-            vflsf_53hradze5clm:
+            vflsf_aro08j1ems51:
                 source: ./_install/
                 target: /home/_install/
                 sync_type: default
@@ -82,7 +82,7 @@ vagrantfile:
                     auto: 'true'
                 owner: www-data
                 group: www-data
-            vflsf_pm1kngt8fjp5:
+            vflsf_51ci773qk30w:
                 source: ./_logs/
                 target: /var/log
                 sync_type: default
@@ -183,7 +183,7 @@ apache:
         - proxy_fcgi
         - rewrite
     vhosts:
-        av_z8x7f8w00z8a:
+        av_zaln45g0ysb6:
             servername: awesome.dev
             serveraliases:
                 - www.awesome.dev
@@ -202,7 +202,7 @@ apache:
             ssl_protocol: ''
             ssl_cipher: ''
             directories:
-                avd_lf77sz91d22s:
+                avd_a9a0et5z6bt3:
                     path: /var/www/awesome
                     options:
                         - Indexes
@@ -214,7 +214,7 @@ apache:
                         - 'all granted'
                     custom_fragment: ''
                     files_match:
-                        avdfm_0oreqoqymrm0:
+                        avdfm_iogk2l0prql2:
                             path: \.php$
                             sethandler: 'proxy:fcgi://127.0.0.1:9000'
                             custom_fragment: ''
@@ -265,7 +265,7 @@ php:
     fpm_ini:
         error_log: /var/log/php-fpm.log
     fpm_pools:
-        phpfp_b4i6py97bbwj:
+        phpfp_o0wi2zfvoqt8:
             ini:
                 prefix: www
                 listen: '127.0.0.1:9000'
@@ -308,7 +308,7 @@ drush:
 ruby:
     install: '1'
     versions:
-        rv_tg5y01dv5ln9:
+        rv_2tna90vqyliu:
             default: '1'
             bundler: '1'
             version: 1.9.3
@@ -348,15 +348,15 @@ mariadb:
         override_options: {  }
     adminer: 0
     users:
-        mariadbnu_64jxdu9c3awd:
+        mariadbnu_jl78uavr88us:
             name: dbuser
             password: '123'
     databases:
-        mariadbnd_qvpkvq02vxhh:
+        mariadbnd_b5fv8oxmjokb:
             name: dbname
             sql: ''
     grants:
-        mariadbng_3tjcy9ot2t45:
+        mariadbng_o9zcb9q7ghmo:
             user: dbuser
             table: '*.*'
             privileges:
@@ -369,15 +369,15 @@ mysql:
         override_options: {  }
     adminer: 0
     users:
-        mysqlnu_xphpidy0f88t:
+        mysqlnu_zod6fw8nz6py:
             name: veikt
             password: AAMQfaqRFT7sqHFJ
     databases:
-        mysqlnd_ae4b48e8qnw0:
+        mysqlnd_lzqmajs2tc7v:
             name: veikt
             sql: /home/_install/db/veikt.sql
     grants:
-        mysqlng_70qkwseqkppd:
+        mysqlng_cnch1ch2jnw6:
             user: veikt
             table: '*.*'
             privileges:
@@ -442,7 +442,7 @@ elastic_search:
         version: 2.3.1
         java_install: true
     instances:
-        esi_dc05uel9m80b:
+        esi_jhtqplnhsney:
             name: es-01
 solr:
     install: '0'
