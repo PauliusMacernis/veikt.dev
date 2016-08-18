@@ -7,7 +7,8 @@ Quick install:
 - Do `vagrant up`
 - Manually copy content of the file `_install\hosts\hosts` into the host file of your local machine.
 - Do `vagrant ssh` 
-- Do `sudo /vagrant/puphpet/files/exec-once/config-nginx.sh` 
+- Do `sudo /vagrant/puphpet/files/exec-once/config-nginx.sh`
+- Do `sudo /vagrant/puphpet/files/exec-once/config-mysql.sh`
 - Manually remmove all inner content of `veikt.dev/httpdocs` and manually do `git clone https://github.com/sugalvojau/veikt.com.git .` from `veikt.dev/httpdocs`
 - Do `cd /home/veikt.dev/httpdocs/step3.output`
 - Do `php composer.phar install`
