@@ -1,5 +1,5 @@
 # veikt.dev
-Development environment for veikt.com project to develop.
+Development environment for veikt.com project.
 
 Quick install:
 - Install VirtualBox and Vagrant
