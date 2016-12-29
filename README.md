@@ -14,7 +14,7 @@ Quick install:
 The next time you will come back for development - do `vagrant up` (this will be much much faster this time). Finished your work? Doing `vagrant halt` will turn all off again.
 
 
-For example, lets say you are about to work with job ads from cvbankas.lt website. Then you have to run:
+The example. Lets say you are about to work with job ads from cvbankas.lt website while your Virtual Machine is on (which means you did all from above). Then you have to run:
 - http://download.veikt.dev/projects/cvbankas.lt/index.php ,- this will download job ads from the web to the server
 - http://normalize.veikt.dev/projects/cvbankas.lt/index.php ,- this will validate and write the information from server files to a database
 - http://output.veikt.dev or http://www.veikt.dev ,- this will output all to your browser in the same way www.veikt.com outputs
