@@ -11,7 +11,7 @@ Quick install:
 - That is it. Open `www.veikt.dev` in your favourite internet browser. What you see in the browser is the `output` part of the project. At the moment project consists of 3 parts: `download`, `normalize`, `output`.
 - Do `vagrant halt` to turn all off.
 
-The next time you will come back for development - do `vagrant up` (this will be much much faster this time). Finished your work? Doing `vagrant halt` will turn all off again.
+The next time you will come back for development - do `vagrant up` only. "vagrant up" will be much much faster this time. Finished your work? Doing `vagrant halt` will turn all off again.
 
 
 The example. Lets say you are about to work with job ads from cvbankas.lt website while your Virtual Machine is on (which means you did all from above). Then you have to run:
