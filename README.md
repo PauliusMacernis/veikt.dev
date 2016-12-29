@@ -19,7 +19,7 @@ The example. Lets say you are about to work with job ads from cvbankas.lt websit
 - http://normalize.veikt.dev/projects/cvbankas.lt/index.php ,- this will validate and write the information from server files to a database
 - http://output.veikt.dev or http://www.veikt.dev ,- this will output all to your browser in the same way www.veikt.com outputs
 
-More info on puphpet: https://puphpet.com/#help
+More info on puphpet: https://puphpet.com/#help  
 Insructions on how to navigate inside the code, to develop, etc.: https://github.com/sugalvojau/veikt.com
 
 Contact me if any difficulties arise.
