@@ -11,10 +11,10 @@ Quick install:
 - That is it. Open `www.veikt.dev` in your favourite internet browser. What you see in the browser is the `output` part of the project. At the moment project consists of 3 parts: `download`, `normalize`, `output`.
 
 
-For example, if you are interested to work with job ads from cvbankas.lt (for example) then you have to navigate:
-- For downloading job ads: http://download.veikt.dev/projects/cvbankas.lt/index.php ,- this will download job ads from the web to the server.
-- For normalizing job ads: http://normalize.veikt.dev/projects/cvbankas.lt/index.php ,- this will validate and write the information from server files to a database.
-- The information on job ads could now be seen here - http://output.veikt.dev or here - http://www.veikt.dev
+For example, lets say you are about to work with job ads from cvbankas.lt website. Then you have to run:
+- http://download.veikt.dev/projects/cvbankas.lt/index.php ,- this will download job ads from the web to the server
+- http://normalize.veikt.dev/projects/cvbankas.lt/index.php ,- this will validate and write the information from server files to a database
+- http://output.veikt.dev or http://www.veikt.dev ,- this will output all to your browser in the same way www.veikt.com outputs
 
 More info on puphpet could be found at https://puphpet.com/#help
 Contact me if any difficulties arise.
