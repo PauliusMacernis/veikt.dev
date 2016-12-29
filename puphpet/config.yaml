@@ -3,8 +3,8 @@ vagrantfile:
     vm:
         provider:
             local:
-                box: puphpet/centos65-x64
-                box_url: puphpet/centos65-x64
+                box: puphpet/centos7-x64
+                box_url: puphpet/centos7-x64
                 box_version: '0'
                 chosen_virtualizer: virtualbox
                 virtualizers:
@@ -15,30 +15,32 @@ vagrantfile:
                     vmware:
                         numvcpus: 1
                     parallels:
-                        use_linked_clone: 0
+                        linked_clone: 0
                         check_guest_tools: 0
                         update_guest_tools: 0
                 machines:
-                    vflm_i7rupjre2uya:
+                    vflm_yq8w48i1suym:
                         id: veikt.dev
                         hostname: veikt.dev
                         network:
                             private_network: 192.168.56.177
                             forwarded_port:
-                                vflmnfp_b2jarqqmoikl:
+                                vflmnfp_5wewuz14n0pc:
                                     host: '7342'
                                     guest: '22'
-                        memory: '768'
+                        memory: '1024'
                         cpus: '1'
         provision:
             puppet:
                 manifests_path: puphpet/puppet/manifests
-                module_path: puphpet/puppet/modules
+                module_path:
+                    - puphpet/puppet/modules
+                    - puphpet/puppet/manifests
                 options:
                     - '--verbose'
                     - '--hiera_config /vagrant/puphpet/puppet/hiera.yaml'
         synced_folder:
-            vflsf_kdzehdmq9j6x:
+            vflsf_hwfsgv2estjb:
                 source: ./veikt.dev/
                 target: /home/veikt.dev/
                 sync_type: default
@@ -60,31 +62,9 @@ vagrantfile:
                     auto: 'true'
                 owner: www-data
                 group: www-data
-            vflsf_aro08j1ems51:
+            vflsf_i4mdoiyk4r6f:
                 source: ./_install/
                 target: /home/_install/
-                sync_type: default
-                smb:
-                    smb_host: ''
-                    smb_username: ''
-                    smb_password: ''
-                    mount_options:
-                        dir_mode: '0775'
-                        file_mode: '0664'
-                rsync:
-                    args:
-                        - '--verbose'
-                        - '--archive'
-                        - '-z'
-                    exclude:
-                        - .vagrant/
-                        - .git/
-                    auto: 'true'
-                owner: www-data
-                group: www-data
-            vflsf_51ci773qk30w:
-                source: ./_logs/
-                target: /var/log
                 sync_type: default
                 smb:
                     smb_host: ''
@@ -159,9 +139,10 @@ cron:
 nginx:
     install: '1'
     settings:
+        version: present
         default_vhost: 1
-        proxy_buffer_size: 128k
         proxy_buffers: '4 256k'
+        proxy_buffer_size: 128k
         proxy_connect_timeout: 600s
         proxy_send_timeout: 600s
         proxy_read_timeout: 600s
@@ -183,7 +164,7 @@ apache:
         - proxy_fcgi
         - rewrite
     vhosts:
-        av_zaln45g0ysb6:
+        av_o8sczif932oa:
             servername: awesome.dev
             serveraliases:
                 - www.awesome.dev
@@ -202,7 +183,7 @@ apache:
             ssl_protocol: ''
             ssl_cipher: ''
             directories:
-                avd_a9a0et5z6bt3:
+                avd_sijmnxuhn95y:
                     path: /var/www/awesome
                     options:
                         - Indexes
@@ -214,7 +195,7 @@ apache:
                         - 'all granted'
                     custom_fragment: ''
                     files_match:
-                        avdfm_iogk2l0prql2:
+                        avdfm_wn6mep8ncb3t:
                             path: \.php$
                             sethandler: 'proxy:fcgi://127.0.0.1:9000'
                             custom_fragment: ''
@@ -228,7 +209,7 @@ letsencrypt:
 php:
     install: '1'
     settings:
-        version: '55'
+        version: '7.1'
     modules:
         php:
             - cli
@@ -265,7 +246,7 @@ php:
     fpm_ini:
         error_log: /var/log/php-fpm.log
     fpm_pools:
-        phpfp_o0wi2zfvoqt8:
+        phpfp_nn0y5xazdx96:
             ini:
                 prefix: www
                 listen: '127.0.0.1:9000'
@@ -308,7 +289,7 @@ drush:
 ruby:
     install: '1'
     versions:
-        rv_2tna90vqyliu:
+        rv_raditjds2sev:
             default: '1'
             bundler: '1'
             version: 1.9.3
@@ -327,7 +308,6 @@ nodejs:
     npm_packages: {  }
 hhvm:
     install: '0'
-    nightly: 0
     composer: '1'
     composer_home: ''
     settings: {  }
@@ -348,15 +328,15 @@ mariadb:
         override_options: {  }
     adminer: 0
     users:
-        mariadbnu_jl78uavr88us:
+        mariadbnu_bm8x7y5xlb89:
             name: dbuser
             password: '123'
     databases:
-        mariadbnd_b5fv8oxmjokb:
+        mariadbnd_avgf1dvqv6au:
             name: dbname
             sql: ''
     grants:
-        mariadbng_o9zcb9q7ghmo:
+        mariadbng_p6fncnrljidx:
             user: dbuser
             table: '*.*'
             privileges:
@@ -364,20 +344,20 @@ mariadb:
 mysql:
     install: '1'
     settings:
-        version: '5.6'
+        version: '5.7'
         root_password: '123'
         override_options: {  }
     adminer: 0
     users:
-        mysqlnu_zod6fw8nz6py:
+        mysqlnu_nvyowdtea7ka:
             name: veikt
             password: AAMQfaqRFT7sqHFJ
     databases:
-        mysqlnd_lzqmajs2tc7v:
+        mysqlnd_lwfr2gx0tojr:
             name: veikt
             sql: /home/_install/db/veikt.sql
     grants:
-        mysqlng_cnch1ch2jnw6:
+        mysqlng_i819vp6v23yf:
             user: veikt
             table: '*.*'
             privileges:
@@ -442,7 +422,7 @@ elastic_search:
         version: 2.3.1
         java_install: true
     instances:
-        esi_jhtqplnhsney:
+        esi_q65lstk63v1m:
             name: es-01
 solr:
     install: '0'

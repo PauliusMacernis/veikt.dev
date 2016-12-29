@@ -20,4 +20,4 @@
 #	127.0.0.1       localhost
 #	::1             localhost
 
-192.168.56.177      www.veikt.dev step1.veikt.dev step2.veikt.dev step3.veikt.dev
+192.168.56.177      www.veikt.dev download.veikt.dev normalize.veikt.dev output.veikt.dev
