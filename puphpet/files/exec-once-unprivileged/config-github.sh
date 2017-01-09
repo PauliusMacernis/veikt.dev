@@ -7,7 +7,9 @@ cd /home/veikt.dev/httpdocs/
 
 # Get the source of the project
 git clone https://github.com/sugalvojau/veikt.com.git .
-git checkout v2-testing
+git checkout master
+
+chmod 774 /home/veikt.dev/main.sh
 
 #######################
 # Prepare download.
@@ -56,7 +58,7 @@ php composer.phar update
 #######################
 # Prepare output.
 #######################
-cd /home/veikt.dev/httpdocs/output
+cd /home/veikt.dev/httpdocs/www
 # Update vendors
 rm -rf vendor
 rm -f composer.lock
@@ -72,4 +74,14 @@ php -r "unlink('composer-setup.php');"
 # Composer update (install)
 #php composer.phar self-update
 php composer.phar update
+
+
+##############################################
+# Prepare www. [INSTALL]
+##############################################
+
+cd /home/veikt.dev/www;
+
+
+
 

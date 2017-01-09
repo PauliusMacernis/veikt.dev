@@ -7,7 +7,7 @@ cd /home/veikt.dev/httpdocs/
 
 # Get the source of the project
 git clone https://github.com/sugalvojau/veikt.com.git .
-git checkout v2-testing
+git checkout master
 
 chmod 774 /home/veikt.dev/main.sh
 
