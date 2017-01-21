@@ -1,5 +1,5 @@
 # veikt.dev
-Development environment for veikt.com project.
+Development environment for [veikt.com project](https://github.com/sugalvojau/veikt.com).
 
 Quick install:
 - Install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/)
