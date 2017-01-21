@@ -2,13 +2,13 @@
 Development environment for veikt.com project.
 
 Quick install:
-- Install VirtualBox and Vagrant
-- Download all files of this repository
+- Install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/)
+- [Download all files of this repository](https://github.com/sugalvojau/veikt.dev/archive/master.zip)
 - Do `vagrant up` (expect about 30+ minutes)
 - Manually copy content of the file `_install\hosts\hosts` into the host file of your local machine, if the information is not in there already.
 - Do `vagrant ssh` 
 - Do `/home/_install/puphpet/files/exec-preprovision/config-1.sh && /home/_install/puphpet/files/exec-once/config-1.sh && /home/_install/puphpet/files/exec-once/config-mysql.sh && /home/_install/puphpet/files/exec-once/config-nginx.sh && /home/_install/puphpet/files/exec-once/config-php.sh && /home/_install/puphpet/files/exec-once/config-www-frontend.sh && /home/_install/puphpet/files/exec-once-unprivileged/config-github.sh`
-- That is it. Open `www.veikt.dev` in your favourite internet browser. What you see in the browser is the `output` part of the project. At the moment project consists of 4 parts: `download`, `normalize`, `publicize`, `output`.
+- That is it. [Open](http://www.veikt.dev) `www.veikt.dev` in your favourite internet browser. What you see is the `www` part of the project. At the moment project consists of 4 parts: `download`, `normalize`, `publicize`, `www` (sometimes also called `output`).
 - Do `vagrant halt` to turn all off.
   
   
