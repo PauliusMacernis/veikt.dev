@@ -4,7 +4,7 @@
 
 curl --silent --location https://rpm.nodesource.com/setup_7.x | bash -
 sudo yum -y install nodejs
-yum install gcc-c++ make
+sudo yum install gcc-c++ make
 sudo yum install nodejs npm --enablerepo=epel
 sudo npm install -g gulp
 

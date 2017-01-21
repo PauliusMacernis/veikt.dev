@@ -18,7 +18,7 @@ git stash clear;
 git pull;
 
 # Make main.sh ready
-chmod 774 /home/veikt.dev/main.sh
+chmod 774 /home/veikt.dev/httpdocs/main.sh
 
 
 ##############################################
@@ -71,6 +71,8 @@ rm -f composer.phar
 #php bin/console cache:clear --env=prod;
 #cd /home/veikt.dev/httpdocs/www;
 cp /home/_install/php/composer.phar /home/veikt.dev/httpdocs/www/composer.phar
+php /home/veikt.dev/httpdocs/www/composer.phar update
+
 #SYMFONY_ENV=prod
 php /home/veikt.dev/httpdocs/www/composer.phar dump-autoload
 
@@ -85,7 +87,7 @@ php /home/veikt.dev/httpdocs/www/composer.phar update --no-dev --optimize-autolo
 #cp /home/_install/yml/settings.database.private.json /home/veikt.dev/httpdocs/settings.database.private.json
 #cp /home/_install/yml/settings.mail.private.json /home/veikt.dev/httpdocs/settings.mail.private.json
 
-php artisan migrate
+php artisan migrate --force
 
 chmod 774 /home/veikt.dev/httpdocs/main.sh
 
