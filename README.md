@@ -7,8 +7,8 @@ Quick install:
 - Do `vagrant up` (this will take a while - from 15+ minutes if your computer and internet is fast to 1 hour+ if slow)
 - Manually copy content of the file `_install\hosts\hosts` into the host file of your local machine, if the information is not in there already.
 - Do `vagrant ssh` 
-- Do `/home/_install/puphpet/files/exec-preprovision/config-1.sh && /home/_install/puphpet/files/exec-once/config-1.sh && /home/_install/puphpet/files/exec-once/config-mysql.sh && /home/_install/puphpet/files/exec-once/config-nginx.sh && /home/_install/puphpet/files/exec-once/config-php.sh && /home/_install/puphpet/files/exec-once-unprivileged/config-github.sh`
-- That is it. Open `www.veikt.dev` in your favourite internet browser. What you see in the browser is the `output` part of the project. At the moment project consists of 3 parts: `download`, `normalize`, `output`.
+- Do `/home/_install/puphpet/files/exec-preprovision/config-1.sh && /home/_install/puphpet/files/exec-once/config-1.sh && /home/_install/puphpet/files/exec-once/config-mysql.sh && /home/_install/puphpet/files/exec-once/config-nginx.sh && /home/_install/puphpet/files/exec-once/config-php.sh && /home/_install/puphpet/files/exec-once/config-www-frontend.sh && /home/_install/puphpet/files/exec-once-unprivileged/config-github.sh`
+- That is it. Open `www.veikt.dev` in your favourite internet browser. What you see in the browser is the `output` part of the project. At the moment project consists of 4 parts: `download`, `normalize`, `publicize`, `output`.
 - Do `vagrant halt` to turn all off.
   
   

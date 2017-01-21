@@ -17,22 +17,14 @@ USE `veikt`;
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 
 -- Dumping structure for table veikt.job
-CREATE TABLE IF NOT EXISTS `job` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `file_datetime` datetime DEFAULT NULL,
-  `datetime_updated` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `datetime_imported` datetime DEFAULT NULL,
-  `file_browser_id` varchar(1000) DEFAULT NULL,
-  `file_project` varchar(100) DEFAULT NULL,
-  `file_url` varchar(2100) DEFAULT NULL,
-  `file_id` varchar(10000) DEFAULT NULL,
-  `file_content_static` mediumtext,
-  `file_content_dynamic` text,
-  `content_static_without_tags` mediumtext,
-  `content_dynamic_without_tags` text,
-  `is_published` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+
+-- Your SQL queries starts here...
+
+-- ...
+
+-- Your SQL queries end here...
+
 
 -- Data exporting was unselected.
 /*!40101 SET SQL_MODE=IFNULL(@OLD_SQL_MODE, '') */;
