@@ -13,3 +13,5 @@
 .project
 
 # Web root content
+/veikt.dev/httpdocs
+!/veikt.dev/httpdocs/.gitignore
