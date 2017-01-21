@@ -4,7 +4,7 @@ Development environment for veikt.com project.
 Quick install:
 - Install VirtualBox and Vagrant
 - Download all files of this repository
-- Do `vagrant up` (this will take a while - from 15+ minutes if your computer and internet is fast to 1 hour+ if slow)
+- Do `vagrant up` (expect about 30+ minutes)
 - Manually copy content of the file `_install\hosts\hosts` into the host file of your local machine, if the information is not in there already.
 - Do `vagrant ssh` 
 - Do `/home/_install/puphpet/files/exec-preprovision/config-1.sh && /home/_install/puphpet/files/exec-once/config-1.sh && /home/_install/puphpet/files/exec-once/config-mysql.sh && /home/_install/puphpet/files/exec-once/config-nginx.sh && /home/_install/puphpet/files/exec-once/config-php.sh && /home/_install/puphpet/files/exec-once/config-www-frontend.sh && /home/_install/puphpet/files/exec-once-unprivileged/config-github.sh`
