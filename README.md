@@ -1,13 +1,13 @@
 # veikt.dev
 Development environment for [veikt.com project](https://github.com/sugalvojau/veikt.com).
 
-Quick install:
+Easy install:
 - Install [VirtualBox](https://www.virtualbox.org/) and [Vagrant](https://www.vagrantup.com/)
 - [Download all files of this repository](https://github.com/sugalvojau/veikt.dev/archive/master.zip)
 - Do `vagrant up` (the command may run for about 30+ minutes)
 - Manually copy content of the file `_install\hosts\hosts` into the [host file of your local machine](https://en.wikipedia.org/wiki/Hosts_(file)), if the content is not in there already.
 - Do `vagrant ssh` 
-- Do `/home/_install/puphpet/files/exec-preprovision/config-1.sh && /home/_install/puphpet/files/exec-once/config-1.sh && /home/_install/puphpet/files/exec-once/config-mysql.sh && /home/_install/puphpet/files/exec-once/config-nginx.sh && /home/_install/puphpet/files/exec-once/config-php.sh && /home/_install/puphpet/files/exec-once/config-www-frontend.sh && /home/_install/puphpet/files/exec-once-unprivileged/config-github.sh`
+- Do `/home/_install/puphpet/files/exec-preprovision/config-1.sh && /home/_install/puphpet/files/exec-once/config-1.sh && /home/_install/puphpet/files/exec-once/config-mysql.sh && /home/_install/puphpet/files/exec-once/config-nginx.sh && /home/_install/puphpet/files/exec-once/config-php.sh && /home/_install/puphpet/files/exec-once/config-www-frontend.sh && /home/_install/puphpet/files/exec-once-unprivileged/config-github.sh` (the command may run for another 30+ minutes)
 - That is it. [Open](http://www.veikt.dev) `www.veikt.dev` in your favourite internet browser. What you see is the `www` part of the project. At the moment project consists of 4 parts: `download`, `normalize`, `publicize`, `www` (sometimes also called `output`).
 - Do `vagrant halt` to turn all off.
   
