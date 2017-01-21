@@ -25,7 +25,7 @@ The example. Lets say you are about to work with job ads from cvbankas.lt websit
 More info on puphpet: https://puphpet.com/#help  
 Insructions on how to navigate inside the code, to develop, etc.: https://github.com/sugalvojau/veikt.com
 
-Contact me if any difficulties arise.
+[Contact me](http://portfolio.vertyb.es/) if any difficulties arise.
 
 Known bugs:
 - If you see 404 error after checking the http://www.veikt.dev then try to ssh into the server (`vagrant ssh`) and restart nginx service (do `sudo service nginx restart`). The website should work fine after restarting the service.
