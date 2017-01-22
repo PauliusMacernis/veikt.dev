@@ -86,6 +86,8 @@ php /home/veikt.dev/httpdocs/www/composer.phar dump-autoload
 php artisan clear-compiled
 
 php /home/veikt.dev/httpdocs/www/composer.phar update --no-dev --optimize-autoloader
+php /home/veikt.dev/httpdocs/www/composer.phar update
+
 #php bin/console cache:clear --env=prod;
 #doctrine:migrations:migrate;\n"
 #SYMFONY_ENV=prod php bin/console --no-interaction doctrine:migrations:migrate;
@@ -94,6 +96,8 @@ php /home/veikt.dev/httpdocs/www/composer.phar update --no-dev --optimize-autolo
 #cp /home/_install/yml/settings.database.private.json /home/veikt.dev/httpdocs/settings.database.private.json
 #cp /home/_install/yml/settings.mail.private.json /home/veikt.dev/httpdocs/settings.mail.private.json
 
+php artisan clear-compiled
+php artisan key:generate
 php artisan migrate --force
 
 chmod 774 /home/veikt.dev/httpdocs/main.sh
