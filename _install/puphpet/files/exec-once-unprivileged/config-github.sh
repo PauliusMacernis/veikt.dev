@@ -3,9 +3,15 @@ date
 bash --version
 php -v
 
+# Install Composer
+cd /home/_install/php
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php --version=1.2.4
+php -r "unlink('composer-setup.php');"
+
 # Remove all project files
-sudo rm -r -f cd /home/veikt.dev/httpdocs/* cd /home/veikt.dev/httpdocs/.*
 cd /home/veikt.dev/httpdocs
+sudo rm -r -f cd /home/veikt.dev/httpdocs/* cd /home/veikt.dev/httpdocs/.*
 
 # Get the source of the project
 git clone https://github.com/sugalvojau/veikt.com.git .
