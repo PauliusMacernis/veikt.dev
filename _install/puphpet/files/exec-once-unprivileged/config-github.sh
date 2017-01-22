@@ -2,6 +2,7 @@
 date
 bash --version
 php -v
+git --version
 
 # Install Composer
 cd /home/_install/php
