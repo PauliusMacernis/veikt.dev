@@ -96,6 +96,7 @@ php /home/veikt.dev/httpdocs/www/composer.phar update
 #cp /home/_install/yml/settings.database.private.json /home/veikt.dev/httpdocs/settings.database.private.json
 #cp /home/_install/yml/settings.mail.private.json /home/veikt.dev/httpdocs/settings.mail.private.json
 
+cp /home/veikt.dev/httpdocs/www/.env.example /home/veikt.dev/httpdocs/www/.env
 php artisan clear-compiled
 php artisan key:generate
 php artisan migrate --force
